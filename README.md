@@ -43,7 +43,7 @@ The code of NSA has been tested running under Python 3.7.6, with the following p
         graph = nx.Graph(nx.read_edgelist("./syn_datasets/birth_death/birth_death_data/1")) # Path of input data at the 1st time step.  
         path = r'./syn_datasets/birth_death' # The file directory of a dataset that is the upper level directory of the input data, to save input data, groundtruth, evolving information, community results and evaluation results.   
         
-2. **Detecting Communities Incrementally**: run `main2.py` to detecting communities in dynamic networks incrementally based on previous time step. Paramaters setting in `main1_initial.py` is as follows (take dataset `birth_death` as example): 
+2. **Detecting Communities Incrementally**: run `main2.py` to detecting communities in dynamic networks incrementally based on previous time step. Paramaters setting in `main2.py` is as follows (take dataset `birth_death` as example): 
 
         n_stampt = 10 # The number of time steps. 
         path = r'./syn_datasets/birth_death' # The file directory of a dataset. 
@@ -54,9 +54,9 @@ The code of NSA has been tested running under Python 3.7.6, with the following p
 ***
 
 **Output Files**
-1. After running `main1_initial.py`, the community result of time step 1 can be obtain (see `./syn_datasets/birth_death/community/community1.txt` for example). 
+1. After running `main1_initial.py`, the community result of time step 1 can be obtained (see `./syn_datasets/birth_death/community/community1.txt` for example). 
 
-2. After running `main2.py`, the the community results of all the time steps can be obtain. The output files include (take dataset `birth_death` as example):
+2. After running `main2.py`, the the community results of all the time steps can be obtained. The output files include (take dataset `birth_death` as example):
     - `./syn_datasets/birth_death/community`: the results of communities. 
     - `./syn_datasets/birth_death/pre_inform`: evolution information of nodes and edges between the two consecutive time steps. 
     - `./syn_datasets/birth_death/Q.txt`: evaluation results by modularity.  
